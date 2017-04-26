@@ -1,0 +1,3 @@
+# /^[A-z]+$/
+
+require'../robot'
