@@ -5,13 +5,19 @@ class Robot
   def initialize
     reset
   end
+  def name_randomizer
+    name = ''
+    2.times do
+      name += ('a'..'z').to_a[rand(26)].to_s.upcase
+    end
+    3.times do
+      name += rand(9).to_s
+    end
+    name
+  end
+
   def reset
-    num1 = ('a'..'z').to_a[rand(26)].to_s.upcase
-    num2 = ('a'..'z').to_a[rand(26)].to_s.upcase
-    num3 = rand(9).to_s
-    num4 = rand(9).to_s
-    num5 = rand(9).to_s
-    p @name = num1 + num2 + num3 + num4 + num5
+    p @name = name_randomizer
   end
   def test
     p @name = "AB100"
@@ -52,4 +58,4 @@ factory.addRobot(robot1)
 robot2 = Robot.new
 factory.addRobot(robot2)
 
-binding.pry
+# binding.pry
