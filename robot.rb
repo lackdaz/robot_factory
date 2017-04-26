@@ -1,5 +1,9 @@
 require 'pry'
 
+@id = {
+
+}
+
 class Robot
   attr_accessor :name
   def initialize
@@ -15,4 +19,4 @@ class Robot
   end
 end
 
-binding.pry
+# binding.pry
