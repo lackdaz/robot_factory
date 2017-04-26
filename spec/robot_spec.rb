@@ -1,6 +1,6 @@
 # /^[A-z]+$/
 
-require '../robot'
+require_relative '../robot'
 
 describe Robot do
   describe 'Initialization' do
