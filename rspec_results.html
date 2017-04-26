@@ -287,30 +287,16 @@ a {
 <div id="div_group_2" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_2" class="passed">Initialization</dt>
-    <script type="text/javascript">makeRed('rspec-header');</script>
-    <script type="text/javascript">makeRed('div_group_2');</script>
-    <script type="text/javascript">makeRed('example_group_2');</script>
+    <script type="text/javascript">moveProgressBar('33.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">should create new robot with name</span><span class='duration'>0.00184s</span></dd>
+    <script type="text/javascript">moveProgressBar('66.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">Name should be in this format RX123 / [A-Z][A-Z][0-9][0-9][0-9]</span><span class='duration'>0.00093s</span></dd>
     <script type="text/javascript">moveProgressBar('100.0');</script>
-    <dd class="example failed">
-      <span class="failed_spec_name">should create new robot with name</span>
-      <span class="duration">0.00027s</span>
-      <div class="failure" id="failure_1">
-        <div class="message"><pre>Failure/Error: [0mexpect(r1.name).to exist
-
-NoMethodError:
-  undefined method `name&#39; for #&lt;Robot:0x007fef32124d90&gt;</pre></div>
-        <div class="backtrace"><pre>./spec/robot_spec.rb:9:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
-    <pre class="ruby"><code><span class="linenum">7</span>    it <span class="string"><span class="delimiter">'</span><span class="content">should create new robot with name</span><span class="delimiter">'</span></span> <span class="keyword">do</span>
-<span class="linenum">8</span>      r1 = <span class="constant">Robot</span>.new
-<span class="offending"><span class="linenum">9</span>      expect(r1.name).to exist</span>
-<span class="linenum">10</span>    <span class="keyword">end</span>
-<span class="linenum">11</span>  <span class="keyword">end</span></code></pre>
-      </div>
-    </dd>
+    <dd class="example passed"><span class="passed_spec_name">After Reset, name should have changed and still retain the right format RX123</span><span class='duration'>0.00085s</span></dd>
   </dl>
 </div>
-<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.09448 seconds</strong>";</script>
-<script type="text/javascript">document.getElementById('totals').innerHTML = "1 example, 1 failure";</script>
+<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.00522 seconds</strong>";</script>
+<script type="text/javascript">document.getElementById('totals').innerHTML = "3 examples, 0 failures";</script>
 </div>
 </div>
 </body>
