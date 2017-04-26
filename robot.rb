@@ -11,9 +11,10 @@ class Robot
     num3 = rand(9).to_s
     num4 = rand(9).to_s
     num5 = rand(9).to_s
-    p Robot_factory.robot_names
     p @name = num1 + num2 + num3 + num4 + num5
-
+  end
+  def test
+    p @name = "AB100"
   end
 end
 
@@ -25,10 +26,15 @@ class Robot_factory
   def initialize
     @robots = []
   end
-  def robot_names
-    p self.@@robot_names
+  def self.robot_names
+    @@robot_names
   end
   def addRobot(robot)
+    while @@robot_names.include?(robot.name) do
+      puts 'There is already a robot with the same name, doing a reset'
+      robot.reset
+    end
+    @@robot_names.push(robot.name)
     @robots.push(robot.name)
   end
 
