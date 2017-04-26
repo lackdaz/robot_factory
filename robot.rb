@@ -1,9 +1,5 @@
 require 'pry'
 
-@id = {
-
-}
-
 class Robot
   attr_accessor :name
   def initialize
@@ -15,8 +11,39 @@ class Robot
     num3 = rand(9).to_s
     num4 = rand(9).to_s
     num5 = rand(9).to_s
+    p Robot_factory.robot_names
     p @name = num1 + num2 + num3 + num4 + num5
+
   end
 end
 
-# binding.pry
+
+class Robot_factory
+  @@robot_names = []
+  attr_accessor :robots
+
+  def initialize
+    @robots = []
+  end
+  def robot_names
+    p self.@@robot_names
+  end
+  def addRobot(robot)
+    @robots.push(robot.name)
+  end
+
+  def print_name
+    @robots
+    # @robots.each do |robot|
+    #   p robot.name
+    # end
+  end
+end
+
+factory = Robot_factory.new
+robot1 = Robot.new
+factory.addRobot(robot1)
+robot2 = Robot.new
+factory.addRobot(robot2)
+
+binding.pry
