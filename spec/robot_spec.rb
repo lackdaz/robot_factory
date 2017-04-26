@@ -12,7 +12,7 @@ describe Robot do
   describe 'Initialization' do
     it 'should create new robot with name' do
       r1 = Robot.new
-      expect(r1.name).to exist
+      expect(r1.name).to be_truthy
     end
   end
 end
